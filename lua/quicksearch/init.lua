@@ -9,7 +9,7 @@ local M = {}
 -- ─────────────────────────────────────────────
 M.config = {
   border   = "rounded",
-  title    = " 🔍 QuickSearch ",
+  title    = "  Ankh ",
   keymap   = "<leader>s",
   history_max  = 50,
   history_path = vim.fn.stdpath("data") .. "/quicksearch_history.json",
@@ -109,7 +109,7 @@ end
 
 local function open_url(url)
   vim.fn.jobstart({ detect_open_cmd(), url }, { detach = true })
-  vim.notify("Opening: " .. url, vim.log.levels.INFO, { title = "QuickSearch" })
+  vim.notify("Opening: " .. url, vim.log.levels.INFO, { title = "Ankh" })
 end
 
 local function get_visual_selection()
@@ -317,7 +317,7 @@ local function show_engine_picker(query, default_engine)
       vim.fn.setreg("+", url)
       vim.fn.setreg('"', url)
       close()
-      vim.notify("Yanked: " .. url, vim.log.levels.INFO, { title = "QuickSearch" })
+      vim.notify("Yanked: " .. url, vim.log.levels.INFO, { title = "Ankh" })
     end
   end, bopts)
 
@@ -496,18 +496,18 @@ function M.setup(opts)
   vim.api.nvim_set_hl(0, "QSLegendKey",    { fg = "#7aa2f7", bold = true })
   vim.api.nvim_set_hl(0, "QSLegendContext",{ fg = "#f7c948" })
 
-  vim.api.nvim_create_user_command("QuickSearch",
+  vim.api.nvim_create_user_command("Ankh",
     function() M.open() end, {})
-  vim.api.nvim_create_user_command("QuickSearchWord",
+  vim.api.nvim_create_user_command("AnkhWord",
     function() M.open_word() end, {})
-  vim.api.nvim_create_user_command("QuickSearchVisual",
+  vim.api.nvim_create_user_command("AnkhVisual",
     function() M.open_visual() end, { range = true })
 
   local key = M.config.keymap
   if key then
-    vim.keymap.set("n", key,        M.open,        { desc = "QuickSearch: open" })
-    vim.keymap.set("n", key .. "w", M.open_word,   { desc = "QuickSearch: word under cursor" })
-    vim.keymap.set("v", key,        M.open_visual, { desc = "QuickSearch: visual selection" })
+    vim.keymap.set("n", key,        M.open,        { desc = "Ankh: open" })
+    vim.keymap.set("n", key .. "w", M.open_word,   { desc = "Ankh: word under cursor" })
+    vim.keymap.set("v", key,        M.open_visual, { desc = "Ankh: visual selection" })
   end
 end
 
