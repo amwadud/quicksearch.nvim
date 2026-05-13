@@ -33,7 +33,7 @@ After pressing Enter, a picker appears:
 **lazy.nvim:**
 ```lua
 {
-  "yourname/quicksearch.nvim",
+  "amwadud/quicksearch.nvim",
   config = function()
     require("quicksearch").setup()
   end,
@@ -43,7 +43,7 @@ After pressing Enter, a picker appears:
 **packer.nvim:**
 ```lua
 use {
-  "yourname/quicksearch.nvim",
+  "amwadud/quicksearch.nvim",
   config = function()
     require("quicksearch").setup()
   end
