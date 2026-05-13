@@ -3,7 +3,7 @@
 A minimal floating search launcher for Neovim — type a query, pick a search engine, open in browser.
 
 ```
-╭──────────────────── 🔍 QuickSearch ────────────────────╮
+╭────────────────────  QuickSearch ────────────────────╮
 │  neovim lua floating window                             │
 ╰─────────────────────────────────────────────────────────╯
 ```
