@@ -3,7 +3,7 @@
 A minimal floating search launcher for Neovim — type a query, pick a search engine, open in browser.
 
 ```
-╭────────────────────  QuickSearch ────────────────────╮
+╭──────────────────── 🔍 QuickSearch ────────────────────╮
 │  neovim lua floating window                             │
 ╰─────────────────────────────────────────────────────────╯
 ```
@@ -33,7 +33,7 @@ After pressing Enter, a picker appears:
 **lazy.nvim:**
 ```lua
 {
-  "amwadud/quicksearch.nvim",
+  "yourname/quicksearch.nvim",
   config = function()
     require("quicksearch").setup()
   end,
@@ -43,7 +43,7 @@ After pressing Enter, a picker appears:
 **packer.nvim:**
 ```lua
 use {
-  "amwadud/quicksearch.nvim",
+  "yourname/quicksearch.nvim",
   config = function()
     require("quicksearch").setup()
   end
