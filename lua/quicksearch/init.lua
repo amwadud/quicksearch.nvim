@@ -8,7 +8,7 @@ local M = {}
 -- ─────────────────────────────────────────────
 M.config = {
   border = "rounded",
-  title  = " 🔍 QuickSearch ",
+  title  = "  QuickSearch ",
   keymap = "<leader>s",
   engines = {
     { key = "g", label = "Google",        url = "https://www.google.com/search?q=" },
